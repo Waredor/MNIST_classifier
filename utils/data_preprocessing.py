@@ -18,8 +18,9 @@ class MNISTDataset(Dataset):
         label = self.labels[idx]
         if image.ndim == 2:
             image = torch.from_numpy(image).float()
+            image = image.unsqueeze(0)
         else:
-            raise ValueError
+            raise ValueError(f"Unexpected image shape: {image.shape}")
 
         return image, label
 

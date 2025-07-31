@@ -47,8 +47,10 @@ def train_model(
         logger.info(f'starting training epoch {epoch + 1}..')
         for batch_idx, (images, labels) in enumerate(dataloader_train):
             batch_train_count += 1
-            images = images.to(device)
-            labels = labels.to(device)
+            images, labels = images.to(device), labels.to(device)
+            if images.shape[1] != 1:
+                images = images.permute(1, 0, 2, 3)
+
             optimizer.zero_grad()
             logits = model(images)
             loss = criterion(logits, labels)

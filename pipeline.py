@@ -3,7 +3,7 @@ import json
 import torch
 
 from torch.utils.data import DataLoader
-from utils.models import MnistMLP
+from utils.models import MnistMLP, MnistCNN
 from utils.data_preprocessing import MNISTDataset, read_and_convert_idx_files
 from utils.model_training import train_model
 from utils.logger import setup_logger
@@ -59,18 +59,28 @@ if __name__ == '__main__':
 
 
     # MODEL INIT
-    LOGGER.info("Initializing model")
-    model = MnistMLP()
-
     with open(file=TRAIN_CONFIG_PATH, mode='r', encoding='utf-8') as f:
         train_config = json.load(f)
 
     LOGGER.info("Initializing model hyperparameters")
+    model_architecture = train_config["used_architecture"]
     lr = train_config['lr']
     epochs = train_config['epochs']
     batch_size = train_config['batch']
     device = train_config['device']
     output_model_filename = train_config['output_model_filename']
+
+    if model_architecture == "mlp":
+        LOGGER.info("Initializing MLP model")
+        model = MnistMLP()
+
+    elif model_architecture == "cnn":
+        LOGGER.info("Initializing CNN model")
+        model = MnistCNN()
+
+    else:
+        LOGGER.error("Wrong value got from 'used_architecture key'")
+        raise ValueError("Wrong value got from 'used_architecture key'")
 
 
     # PREPROCESS DATA
