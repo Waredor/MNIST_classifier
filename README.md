@@ -1,4 +1,4 @@
-# MNIST classificator
+# MNIST classifier
 
 Модели MLP и простой CNN для классификации рукописных цифр.
 
