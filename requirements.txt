@@ -1,0 +1,6 @@
+torch~=2.7.1
+idx2numpy~=1.2.3
+numpy~=2.3.2
+torchvision~=0.22.1
+pylint~=3.3.7
+flask~=3.1.1
