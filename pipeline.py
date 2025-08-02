@@ -1,6 +1,6 @@
 import os
-import json
 import torch
+import yaml
 
 from torch.utils.data import DataLoader
 from utils.models import MnistMLP, MnistCNN
@@ -53,14 +53,14 @@ if __name__ == '__main__':
         PROJECT_ROOT_PATH, 'data/MNIST/raw/t10k-labels-idx1-ubyte'
     )
 
-    TRAIN_CONFIG_PATH = os.path.join(PROJECT_ROOT_PATH, 'configs/pipeline_config.json')
+    TRAIN_CONFIG_PATH = os.path.join(PROJECT_ROOT_PATH, 'configs/pipeline_config.yaml')
 
     MODEL_OUTPUT_PATH = os.path.join(PROJECT_ROOT_PATH, 'models')
 
 
     # MODEL INIT
     with open(file=TRAIN_CONFIG_PATH, mode='r', encoding='utf-8') as f:
-        train_config = json.load(f)
+        train_config = yaml.safe_load(f)
 
     LOGGER.info("Initializing model hyperparameters")
     model_architecture = train_config["used_architecture"]

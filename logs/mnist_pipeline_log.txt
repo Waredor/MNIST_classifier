@@ -209,3 +209,25 @@ model_training.py[LINE:86]# INFO     [2025-08-01 00:29:35,682] Training finished
 pipeline.py[LINE:113]# INFO     [2025-08-01 00:29:35,683] Saving trained model
 pipeline.py[LINE:115]# INFO     [2025-08-01 00:29:35,686] Model successfully saved
 pipeline.py[LINE:116]# INFO     [2025-08-01 00:29:35,686] MNIST pipeline finished
+pipeline.py[LINE:39]# INFO     [2025-08-02 16:52:27,066] Starting MNIST pipeline ...
+pipeline.py[LINE:40]# INFO     [2025-08-02 16:52:27,066] Configuring filepaths...
+pipeline.py[LINE:65]# INFO     [2025-08-02 16:52:27,067] Initializing model hyperparameters
+pipeline.py[LINE:39]# INFO     [2025-08-02 16:52:40,673] Starting MNIST pipeline ...
+pipeline.py[LINE:40]# INFO     [2025-08-02 16:52:40,674] Configuring filepaths...
+pipeline.py[LINE:65]# INFO     [2025-08-02 16:52:40,674] Initializing model hyperparameters
+pipeline.py[LINE:74]# INFO     [2025-08-02 16:52:40,675] Initializing MLP model
+pipeline.py[LINE:87]# INFO     [2025-08-02 16:52:40,689] Initializing model hyperparameters
+model_training.py[LINE:39]# INFO     [2025-08-02 16:52:42,074] Start training
+model_training.py[LINE:47]# INFO     [2025-08-02 16:52:42,074] starting training epoch 1..
+model_training.py[LINE:62]# INFO     [2025-08-02 16:52:43,830] starting validation epoch 1..
+model_training.py[LINE:83]# INFO     [2025-08-02 16:52:43,952] epoch 1 train_loss: 0.3028761786795946, test_loss: 0.1550565801477831, accuracy: 0.9532245222929936
+model_training.py[LINE:47]# INFO     [2025-08-02 16:52:43,952] starting training epoch 2..
+model_training.py[LINE:62]# INFO     [2025-08-02 16:52:45,813] starting validation epoch 2..
+model_training.py[LINE:83]# INFO     [2025-08-02 16:52:45,934] epoch 2 train_loss: 0.1263866560624988, test_loss: 0.10813262868097206, accuracy: 0.9666600318471338
+model_training.py[LINE:47]# INFO     [2025-08-02 16:52:45,935] starting training epoch 3..
+model_training.py[LINE:62]# INFO     [2025-08-02 16:52:47,858] starting validation epoch 3..
+model_training.py[LINE:83]# INFO     [2025-08-02 16:52:47,980] epoch 3 train_loss: 0.08314493738774106, test_loss: 0.08647569187673604, accuracy: 0.972531847133758
+model_training.py[LINE:47]# INFO     [2025-08-02 16:52:47,980] starting training epoch 4..
+model_training.py[LINE:62]# INFO     [2025-08-02 16:52:49,958] starting validation epoch 4..
+model_training.py[LINE:83]# INFO     [2025-08-02 16:52:50,079] epoch 4 train_loss: 0.061065893992831285, test_loss: 0.08086448332078304, accuracy: 0.973328025477707
+model_training.py[LINE:47]# INFO     [2025-08-02 16:52:50,080] starting training epoch 5..
